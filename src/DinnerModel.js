@@ -6,8 +6,12 @@ class DinnerModel{
         this.setNumberOfGuests(nrGuests);
         this.dishes= dishArray;
     }
-    setNumberOfGuests(nr){
+    setNumberOfGuests(nr){ 
         // if() and throw exercise
+        if (!Number.isInteger(nr) || nr < 1) 
+            throw "number of guests not a positive integer";
+        else 
+            this.numberOfGuests = nr;
         
         // TODO throw an error if the argument is smaller than 1 or not an integer
         // the error message must be exactly "number of guests not a positive integer"
@@ -27,11 +31,15 @@ class DinnerModel{
     removeFromMenu(dishToRemove){
         // callback exercise! Also return keyword exercise
         function hasSameIdCB(dish){
+            if (dishToRemove.id === dish.id)
+                return false;
+            else
+                return true;
             // TODO return true if the id property of dish is _different_ from the dishToRemove's id property
             // This will keep the dish when we filter below.
             // That is, we will not keep the dish that has the same id as dishToRemove (if any)
         }
-        this.dishes= this.dishes.filter(/*TODO pass the callback!*/);
+        this.dishes= this.dishes.filter(hasSameIdCB);
         // the test "can remove dishes" should pass
     }
     /* 
@@ -42,6 +50,7 @@ class DinnerModel{
      */
     setCurrentDish(id){
         //this.currentDish=TODO
+        this.currentDish = id;
     }
 
 }
