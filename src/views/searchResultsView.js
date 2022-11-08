@@ -1,13 +1,23 @@
 function SearchResultsView (props){
     return (
         <div>
-            <span class="searchResult"> 
-                <img src="cat.jpeg"></img>
-                <div>{console.log(props)}</div>
-            </span>
+            {
+             
+                props.searchResults.map(picturingCB)
+
+                // console.log(props.searchResults)
+            }
         </div>
 
     );
+
+    function picturingCB(dish){
+        return  <span onClick={eventPrinterACB} key={dish.id}>
+                    <img height="100" src={dish.image}></img>
+                    <div>{dish.title}</div>
+                </span>;
+
+
 
    function printCB(dish){
         return <div>{dish}</div>
@@ -25,6 +35,8 @@ function SearchResultsView (props){
         function onSelectCB(String){
             return <option>{String}</option>
         }
+
+}
 
 }
 

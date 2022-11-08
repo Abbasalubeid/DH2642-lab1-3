@@ -9,7 +9,7 @@ import {
 function treatHTTPResponseACB(response) {
     /*TODO throw if the HTTP response is not 200, otherwise return response.json()*/
     if (response.status !== 200)
-        throw new Error("HTTP response wrong status: ");
+        throw new Error("HTTP response wrong status: " + response.status);
     else
         return response.json();
 }
@@ -28,7 +28,7 @@ function getDishDetails(dishID) {
 }
 
 function transformResultACB(object){
-    return object.result;
+   return object.results;
 }
 
 
