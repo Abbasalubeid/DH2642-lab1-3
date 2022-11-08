@@ -7,4 +7,18 @@
     text-align:right;
 }
 
+.flexParent{
+    display: flex;
+    flex-direction:column;
+    height: 50%;
+}
+
+.sidebar{
+    display: grid;
+    flex: 0.1;
+}
+
+.mainContent{
+    flex: 0.5;
+}
 
