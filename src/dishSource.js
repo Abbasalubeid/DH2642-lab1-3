@@ -27,9 +27,9 @@ function getDishDetails(dishID) {
     .then(treatHTTPResponseACB)
 }
 
-function transformResultACB(object){
-   return object.results;
-}
+// function transformResultACB(object){
+//    return object.results;
+// }
 
 
 
