@@ -28,7 +28,7 @@ function getDishDetails(dishID) {
 }
 
 function transformResultACB(object){
-    debugger;
+    return object.result;
 }
 
 

@@ -3,7 +3,7 @@ function SearchResultsView (props){
         <div>
             <span class="searchResult"> 
                 <img src="cat.jpeg"></img>
-                <div></div>
+                <div>{console.log(props)}</div>
             </span>
         </div>
 
