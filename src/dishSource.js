@@ -9,7 +9,7 @@ import {
 function treatHTTPResponseACB(response) {
     /*TODO throw if the HTTP response is not 200, otherwise return response.json()*/
     if (response.status !== 200)
-        throw new Error("HTTP response wrong status: " + response.status);
+        throw new Error("HTTP response wrong status: ");
     else
         return response.json();
 }
@@ -27,6 +27,11 @@ function getDishDetails(dishID) {
     .then(treatHTTPResponseACB)
 }
 
+function transformResultACB(object){
+    debugger;
+}
+
+
 function searchDishes(dishObject) {
 
   const query = new URLSearchParams(dishObject)
@@ -39,7 +44,7 @@ function searchDishes(dishObject) {
          "x-rapidapi-host": "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com",
      } // end of headers object
  } /* end of second fetch parameter, object */ )
- .then(treatHTTPResponseACB)
+ .then(treatHTTPResponseACB).then(transformResultACB)
 }
 
 

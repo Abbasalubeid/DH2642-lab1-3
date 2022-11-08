@@ -7,4 +7,14 @@
     text-align:right;
 }
 
+.searchResult{
+    text-align: center;
+    display: flex;
+    flex: 0.1;
+    flex-direction: column;
+    width: 200px;
+    vertical-align: bottom;
+    margin: 5px;
+}
+
 
