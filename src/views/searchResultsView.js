@@ -3,7 +3,7 @@ function SearchResultsView (props){
         <div>
             {
                 props.searchResults.map(picturingCB)
-                // console.log(props.searchResults)
+                
             }
         </div>
 
