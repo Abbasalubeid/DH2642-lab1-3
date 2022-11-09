@@ -12,7 +12,7 @@ function SearchResultsView (props){
     );
 
     function picturingCB(dish){
-        return  <span onClick={eventPrinterACB} key={dish.id}>
+        return  <span class= "image"  onClick={eventPrinterACB} key={dish.id}>
                     <img height="100" src={dish.image}></img>
                     <div>{dish.title}</div>
                 </span>;
