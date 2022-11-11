@@ -8,6 +8,7 @@ function searchDishes (props){
             <button onClick={eventPrinterACB} disabled={!props.isDishInMenu}>Cancel</button>
             
             
+            
             {
                 renderIngredients(props.dishData.extendedIngredients, props.guests)
             }
