@@ -1,11 +1,29 @@
 /* This is an example of a JavaScript class.
    The Model keeps only abstract data and has no notions of graohics or interaction
 */
+import {searchDishes} from "./dishSource.js"
+import resolvePromise1 from "./resolvePromise.js"
 class DinnerModel{
     constructor(nrGuests=2, dishArray=[], currentDish){
         this.setNumberOfGuests(nrGuests);
         this.dishes= dishArray;
+        this.searchResultsPromiseState = { }
+        this.searchParams = { }
+
     }
+
+    setSearchQuery(q){
+        this.searchParams.query = q;
+    }
+
+    setSearchType(t){
+        this.searchParams.type = t;
+    }
+
+    doSearch(searchParams){
+        return resolvePromise1(searchDishes(searchParams), this.searchResultsPromiseState);
+    }
+
     setNumberOfGuests(nr){ 
         // if() and throw exercise
         if (!Number.isInteger(nr) || nr < 1) 
