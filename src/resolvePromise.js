@@ -1,5 +1,5 @@
-function resolvePromise1(promiseToResolve, promiseState){
-    promiseState.promise=promiseToResolve;
+function resolvePromise(promiseToResolve, promiseState){
+    promiseState.promise = promiseToResolve;
     promiseState.data= null;
     promiseState.error= null;
     if(promiseToResolve == null){
@@ -20,4 +20,4 @@ function resolvePromise1(promiseToResolve, promiseState){
     }
 
 
-export default resolvePromise1;
+export default resolvePromise;
