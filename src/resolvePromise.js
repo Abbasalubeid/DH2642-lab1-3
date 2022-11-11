@@ -1,4 +1,4 @@
-function resolvePromise(promiseToResolve, promiseState){
+function resolvePromise1(promiseToResolve, promiseState){
     promiseState.promise=promiseToResolve;
     promiseState.data= null;
     promiseState.error= null;
@@ -20,4 +20,4 @@ function resolvePromise(promiseToResolve, promiseState){
     }
 
 
-export default resolvePromise;
+export default resolvePromise1;

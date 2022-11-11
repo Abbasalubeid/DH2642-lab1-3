@@ -1,6 +1,4 @@
 import render from "./teacherRender.js";
-
-
 // make webpack load the file only if it exists
 const X= TEST_PREFIX;
 
