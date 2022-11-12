@@ -6,7 +6,7 @@ function promiseNoData(promiseState){
     if(promiseState.promise)
         if(!promiseState.data)
             if(!promiseState.error)
-                return <img height="250" src="MiniatureBronzeCollie-size_restricted.gif"></img>
+                return <img height="250" src="loading_anim.gif"></img>
 
 
     if(promiseState.error)
@@ -14,14 +14,6 @@ function promiseNoData(promiseState){
     
     if (promiseState.promise && !(promiseState.data))
     return false;
-
-    
-
-    
-
-
-
-
 
 }
 
