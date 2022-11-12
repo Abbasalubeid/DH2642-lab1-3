@@ -1,10 +1,125 @@
+<<<<<<< HEAD
 /* A debug class, used to separate components graphically during development */
 /* .debug {
+=======
+/* A debug class, used to separate components graphically during development
+.debug {
+>>>>>>> main
     border-style:solid;
+}
+.rightFix{
+    text-align:right;
+}
+.searchResult{
+    text-align: center;
+    display: flex;
+    flex: 0.1;
+    flex-direction: column;
+    width: 200px;
+    vertical-align: bottom;
+    margin: 5px;
+} */
+
+
+.debug {
+    margin: 10px;
+    padding: 25px;
+}
+
+.text{
+    margin: 10px;
+    padding: 30px;
+    display: inline-block;
+    font-family: Georgia, serif;
+    font-size: 30px;
 }
 
 .rightFix{
     text-align:right;
+}
+
+.sidebar-table{
+    border-style: solid;
+    background-color: grey;
+}
+
+@media (min-width: 768px){
+    .flexParent{
+        display: flex;
+        flex-direction:row;
+        height: 100%;
+        width: auto;
+        margin-top: 20px;
+    }
+}
+
+div.sidebar{
+    flex: 0.1;
+    display: inline-flex;
+    margin-right: 40px;
+    padding: 10px;
+}
+
+div.mainContent{
+    flex: 1;
+    text-align: center;
+    padding: 15px 100px 5px;
+}
+
+.searchResult{
+    text-align: center;
+    display: flex;
+    flex: 0.1;
+    flex-direction: column;
+    width: 200px;
+    vertical-align: bottom;
+    margin: 5px;
+} */
+
+
+.debug {
+    margin: 10px;
+    padding: 25px;
+}
+
+.text{
+    margin: 10px;
+    padding: 30px;
+    display: inline-block;
+    font-family: Georgia, serif;
+    font-size: 30px;
+}
+
+.rightFix{
+    text-align:right;
+}
+
+.sidebar-table{
+    border-style: solid;
+    background-color: grey;
+}
+
+@media (min-width: 768px){
+    .flexParent{
+        display: flex;
+        flex-direction:row;
+        height: 100%;
+        width: auto;
+        margin-top: 20px;
+    }
+}
+
+div.sidebar{
+    flex: 0.1;
+    display: inline-flex;
+    margin-right: 40px;
+    padding: 10px;
+}
+
+div.mainContent{
+    flex: 1;
+    text-align: center;
+    padding: 15px 100px 5px;
 }
 
 .searchResult{
@@ -97,6 +212,30 @@ div.mainContent{
     color: rgba(243, 93, 6, 0.756);
 }
 
+<<<<<<< HEAD
+=======
+.button {
+    border-style:solid;
+    position: relative; 
+    width: 60px;
+    height: 30px;
+    background: linear-gradient(to left,red,blue);
+    color: #fff;
+}
+
+.styles{
+    text-align:right;
+}
+
+.btn-style{
+    position: relative;
+    text-align:right;
+}
+.link:hover{
+    color: rgba(243, 93, 6, 0.756);
+}
+
+>>>>>>> main
 p{
     display: inline-block;
     text-align: center;
@@ -116,3 +255,8 @@ p{
     border-radius: 5px;
 
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> main

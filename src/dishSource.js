@@ -31,11 +31,10 @@ function transformResultACB(object){
    return object.results;
 }
 
-
 function searchDishes(dishObject) {
 
   const query = new URLSearchParams(dishObject)
-  return fetch(BASE_URL+"recipes/complexSearch?"+query.toString(),
+  return fetch(BASE_URL+"recipes/search?"+query.toString(),
 
   { // object literal
      "method": "GET", // HTTP method
