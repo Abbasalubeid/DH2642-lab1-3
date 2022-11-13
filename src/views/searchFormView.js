@@ -1,12 +1,13 @@
 function SearchFormView (props){
     return (
-        <div>
-            <input  onInput={eventPrinterACB} placeholder="Search..." type="search"></input>
-            <select onInput={eventPrinterACB}>
+        <div class="searchForm">
+            <input  onInput={eventPrinterACB} placeholder="Search anything..." type="search" class="searchInput" title="Search any dish">
+                </input>
+            <select onInput={eventPrinterACB} class="searchSelector" type="select">
                 <option>Choose:</option>
                 {props.dishTypeOptions.map(onSelectCB)}
             </select>
-            <button onClick={searchIsClickedACB}>Search!</button>
+            <button onClick={searchIsClickedACB} class="searchButton"><b>Search!</b></button>
         </div>
     );
 

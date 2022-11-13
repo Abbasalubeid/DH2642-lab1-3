@@ -5,7 +5,7 @@ function searchDishes (props){
             <img height="100" src={props.dishData.image}></img>
             <div>Price {(props.dishData["pricePerServing"]).toFixed(2)}</div>
             <div>For {props.guests} guests: {(props.dishData["pricePerServing"] * props.guests).toFixed(2)}</div>
-            <button onClick={eventPrinterACB} disabled={props.isDishInMenu}>Add to menu!</button>
+            <button onClick={addDishACB} disabled={props.isDishInMenu}>Add to menu!</button>
             <button onClick={eventPrinterACB} disabled={!props.isDishInMenu}>Cancel</button>
             
             
@@ -23,6 +23,9 @@ function searchDishes (props){
     function eventPrinterACB(e){
         console.log(e.target.value)
     }
+    function addDishACB(){
+        props.addDish(dish)
+      }
 
     function renderIngredients(ingredientArray, people){
         function ingredientTableRowCB(ingr){
