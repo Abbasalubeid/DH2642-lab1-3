@@ -6,6 +6,11 @@ body{
     background-color:#e1def6;
     box-sizing: border-box;
 }
+.flexParent{
+    display: flex;
+    flex-grow: inherit;
+    flex-wrap: wrap;
+}
 /********************************Sidebar style********************************/
 .sidebar-firtdiv{
     display: flex;

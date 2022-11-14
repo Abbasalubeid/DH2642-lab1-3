@@ -14,7 +14,7 @@ function DetailsView (props){
             <a href={props.dishData.sourceUrl}>More information</a>
         </div>
         <div>
-            <button onClick={addDishACB} disabled={props.isDishInMenu}>Add to menu!</button>
+            <button onClick={addToMenuACB} disabled={props.isDishInMenu}>Add to menu!</button>
             <button onClick={eventPrinterACB} disabled={!props.isDishInMenu}>Cancel</button>
         </div>
         </div>
@@ -24,9 +24,9 @@ function DetailsView (props){
     function eventPrinterACB(e){
         console.log(e.target.value)
     }
-    function addDishACB(){
-        props.addDish(dish)
-      }
+    // function addDishACB(){
+    //     props.addDish(dish)
+    //   }
 
     function addToMenuACB(){
         props.onAddToMenu();
