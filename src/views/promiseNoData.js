@@ -3,10 +3,6 @@ function promiseNoData(promiseState){
     if (!(promiseState.promise))
     return <div>no data</div>
 
-    // if(promiseState.promise)
-    //     if(!promiseState.data)
-    //         if(!promiseState.error)
-    //             return <img height="250" src="loading_anim.gif"></img>
     if(!promiseState.data && !promiseState.error)
          return <img height="250" src="loading_anim.gif"></img>
 
@@ -17,9 +13,4 @@ function promiseNoData(promiseState){
     return false;
 
 }
-
-
-
-
-
 export default promiseNoData

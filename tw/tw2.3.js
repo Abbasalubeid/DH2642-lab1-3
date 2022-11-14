@@ -13,9 +13,9 @@ try{
 if(SearchFormView)    
     render(
         <SearchFormView dishTypeOptions={["starter", "main course", "dessert"]}
-                        FIXMEcustomEvent1={function searchTextACB(text){ console.log("user wants to set the dish search text ", text); }}
-                        FIXMEcustomEvent2={function searchTypeCB(type){ console.log("user wants to set the dish search type ", type); }}
-                        FIXMEcustomEvent3={function searchNowACB(){ console.log("user wants to search now!"); }}
+                        onUserTyped={function searchTextACB(text){ console.log("user wants to set the dish search text ", text); }}
+                        onUserChose={function searchTypeCB(type){ console.log("user wants to set the dish search type ", type); }}
+                        onUserSearched={function searchNowACB(){ console.log("user wants to search now!"); }}
         />,
         document.getElementById('root')
     );

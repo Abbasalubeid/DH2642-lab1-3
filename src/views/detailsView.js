@@ -1,5 +1,4 @@
-
-function searchDishes (props){
+function DetailsView (props){
     return (
         <div class="search-dishes">
             <div class="div">
@@ -29,7 +28,15 @@ function searchDishes (props){
         props.addDish(dish)
       }
 
-    function renderIngredients(ingredientArray, people){
+    function addToMenuACB(){
+        props.onAddToMenu();
+    }
+
+    // function cancelAddingACB(){
+    //     props.onCancel();
+    // }
+
+    function renderIngredients(ingredientArray){
         function ingredientTableRowCB(ingr){
             return <tr key={ingr.id}><td>{ingr.name}:</td> <td class="rightFix">{(ingr.amount).toFixed(2)} 
             </td><td>{ingr.unit} </td></tr>;
@@ -55,5 +62,4 @@ function searchDishes (props){
 
 }
 
-export default searchDishes;
-
+export default DetailsView;
