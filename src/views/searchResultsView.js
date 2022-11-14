@@ -3,7 +3,6 @@ function SearchResultsView (props){
         <div>
             {
                 props.searchResults.map(picturingCB)
-                // console.log(props.searchResults)
             }
         </div>
 
@@ -15,8 +14,8 @@ function SearchResultsView (props){
                     <div>{dish.title}</div>
                 </span>;
 
-    function eventPrinterACB(e){
-        console.log(e.target.value)
+    function eventPrinterACB(){
+        props.onUserChoseDish(dish)
     }
 
 }

@@ -1,16 +1,16 @@
-function searchDishes (props){
+function DetailsView (props){
     return (
         <div>
             <img height="100" src={props.dishData.image}></img>
             <div>Price {(props.dishData["pricePerServing"]).toFixed(2)}</div>
             <div>For {props.guests} guests: {(props.dishData["pricePerServing"] * props.guests).toFixed(2)}</div>
-            <button onClick={eventPrinterACB} disabled={props.isDishInMenu}>Add to menu!</button>
+            <button onClick={addToMenuACB} disabled={props.isDishInMenu}>Add to menu!</button>
             <button onClick={eventPrinterACB} disabled={!props.isDishInMenu}>Cancel</button>
             
             
             
             {
-                renderIngredients(props.dishData.extendedIngredients, props.guests)
+                renderIngredients(props.dishData.extendedIngredients)
             }
             <div>{props.dishData.instructions}</div>
 
@@ -23,7 +23,15 @@ function searchDishes (props){
         console.log(e.target.value)
     }
 
-    function renderIngredients(ingredientArray, people){
+    function addToMenuACB(){
+        props.onAddToMenu();
+    }
+
+    // function cancelAddingACB(){
+    //     props.onCancel();
+    // }
+
+    function renderIngredients(ingredientArray){
         function ingredientTableRowCB(ingr){
             return <tr key={ingr.id}><td>{ingr.name}:</td> <td class="rightFix">{(ingr.amount).toFixed(2)} 
             </td><td>{ingr.unit} </td></tr>;
@@ -49,4 +57,4 @@ function searchDishes (props){
 
 }
 
-export default searchDishes;
+export default DetailsView;
