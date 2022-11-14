@@ -4,8 +4,9 @@ import  {sortIngredients}  from "../utilities.js"
 function SummaryView(props){
     return (
             <div class="debug">
+                {/* <div class="text">Summary for <span title="nr guests">{props.people}</span> persons: </div> */}
                 Summary for <span title="nr guests">{props.people}</span> persons:
-            
+                <div>
                 {  //  <---- we are in JSX; with this curly brace, we go back to JavaScript, and can write JS code and comments.
                    // Then we can come back to JSX <tags>
             
@@ -13,6 +14,7 @@ function SummaryView(props){
                        renderIngredients(props.ingredients, props.people) */
                     renderIngredients(props.ingredients, props.people)
                 }
+                </div>
             </div>
     );
 }
@@ -26,7 +28,7 @@ function renderIngredients(ingredientArray, people){
     }
     
     
-    return <table>
+    return <table border="2px solid black" width="100%" height="100%">
         <thead>
         <tr><th>Name</th><th>Aisle</th><th>Quantity</th><th>unit</th></tr>
         </thead>

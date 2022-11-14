@@ -8,10 +8,12 @@ function SidebarView(props){
 
     return (
             <div>
+              <div class="sidebar-firtdiv">
                 <button disabled={ props.number === 1}
-                        onClick={minusButtonIsClickedACB}>-</button>
-                { props.number}        
-                <button onClick={plusButtonIsClickedACB}>+</button>
+                        onClick={minusButtonIsClickedACB} class="button btn1" title="Click to decrease nr of guest"><b>-</b></button>
+                        <p class="number"><b>{props.number}</b></p>      
+                <button onClick={plusButtonIsClickedACB} class="button btn2" title="Click to increase nr of guest"><b>+</b></button>
+                </div>
                 { dishRendering(props.dishes, props.number)}
             </div>
     );
@@ -28,9 +30,9 @@ function SidebarView(props){
       function dishRendering(dishArray, people){
 
         function dishTableRowCB(dish){
-            return <tr key={dish.id}>
-                        <td><button onClick={xIsClickedACB}>x</button></td> 
-                        <td><a onClick={nameTagIsClickedACB} href="#">{dish.title}</a></td> 
+            return <tr key={dish.id} class="sidebar-trText">
+                        <td><button onClick={xIsClickedACB} class="btn-style" title="Click to remove">x</button></td> 
+                        <td><a onClick={nameTagIsClickedACB} href="#" class="link">{dish.title}</a></td> 
                         <td class="rightFix">{dishType(dish)}</td>
                         <td class="rightFix">{(dish.pricePerServing*people).toFixed(2)}</td>
                    </tr>;
@@ -45,10 +47,10 @@ function SidebarView(props){
       }
         }
         
-        return <table>
+        return <table border="1px solid black" width="400px" height="300">
             <tbody>
     
-                { sortDishes(dishArray).map(dishTableRowCB)}
+                {sortDishes(dishArray).map(dishTableRowCB)}
                 
                 <tr>
                     <td> </td>

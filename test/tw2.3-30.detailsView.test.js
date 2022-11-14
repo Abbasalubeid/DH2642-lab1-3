@@ -38,7 +38,7 @@ describe("TW2.3 DetailsView", function tw2_3_30() {
         "textContent",
         ceilAndFloor(dishInformation["pricePerServing"])
       ),
-      "The price of the dish is not rendered."
+      "The price of the dish is not rendered." 
     ).to.be.ok;
   });
 

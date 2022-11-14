@@ -1,12 +1,13 @@
 function SearchFormView (props){
     return (
-        <div>
-            <input  onChange={userTypedACB} placeholder="Search..." type="search"></input>
-            <select onChange={usesChoseACB}>
+        <div class="searchForm">
+            <input  onChange={userTypedACB} placeholder="What do you want for food" type="search" class="searchInput" title="Search any dish">
+                </input>
+            <select onChange={usesChoseACB} class="searchSelector" type="select">
                 <option value= "">Choose:</option>
                 {props.dishTypeOptions.map(onSelectCB)}
             </select>
-            <button onClick={userSearchedACB}>Search!</button>
+            <button onClick={userSearchedACB} class="searchButton"><b>Search!</b></button>
         </div>
     );
 
