@@ -1,7 +1,7 @@
 /* A debug class, used to separate components graphically during development */
 /********************************Body style********************************/
 body{
-    margin: 0;
+    margin: 0px;
     padding:0;
     background-color:#e1def6;
     box-sizing: border-box;
@@ -129,8 +129,17 @@ hr{
         flex: 0.7;
         display: inline-block;
     }
+    .searchResult{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
     .searchResult span{
-        flex-wrap: wrap-reverse;
+        width: 100%;
+        height: 100%;
+        /* flex-shrink: 10px; */
+        flex-wrap: wrap;
+        flex-basis: flex-start;
     }
 
 }
@@ -156,7 +165,7 @@ hr{
     color: #292838;
 }
 .searchSelector{
-    width: 90px;
+    width: 110px;
     height: 30px;
     border: 3px solid #292838;
     border-radius: 60px;
@@ -182,16 +191,17 @@ hr{
     margin: 5px;
     display: flex;
     flex-direction: row;
-    vertical-align: bottom;
+    /* vertical-align: bottom; */
 }
 .searchResult span{
     border: 2px solid #292838;
     border-radius: 15px;
-    width: 100%;
-    height: auto;
+    /* width: 100%; */
+    /* height: auto; */
     margin: 5px;
-    justify-content:  space-between;
-    text-align: center;
+    /* justify-content:baseline; */
+    /* align-self: flex; */
+
 }
 .searchResult img{
     width: 90%;
