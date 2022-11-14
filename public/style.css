@@ -119,13 +119,15 @@ hr{
         display: inline-block;
         padding: 10px;
     }
-
-
     div.mainContent{
         width: 100%;
         flex: 0.7;
         display: inline-block;
     }
+    .searchResult span{
+        flex-wrap: wrap-reverse;
+    }
+
 }
 /********************************Search bar style********************************/
 
@@ -180,22 +182,24 @@ hr{
 .searchResult span{
     border: 2px solid #292838;
     border-radius: 15px;
-    width: auto;
+    width: 100%;
     height: auto;
     margin: 5px;
     justify-content:  space-between;
+    text-align: center;
 }
 .searchResult img{
     width: 90%;
+    cursor: pointer;
 }
 .searchResult div{
-    width: 80%;
+    width: 90%;
     text-align: center;
     margin: 5px;
 }
 
 .image{
-    height: 100px;
+    height: 150px;
     width: inherit;
     display: inline-block;
     margin: 3px;
@@ -204,3 +208,40 @@ hr{
 
 }
 
+/********************************DetailsView style********************************/
+.search-dishes{
+    display: flex;
+    flex-direction: row;
+}
+.div{
+    border: 2px solid black;
+    border-radius: 5px;
+    margin: 0;
+}
+.detailsView{
+    width: auto;
+    display: flex;
+    flex-direction: row;
+}
+.detailsView .txt1{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgb(6, 129, 196);
+    border-radius: 3px;
+}
+
+div.txt1{
+    flex: 0.7;
+    width: 300px;
+    height: 50px;
+    text-align: left;
+    margin-top: 10px;
+    font-size: 20px;
+    font-family: sans-serif;
+}
+
+.instr{
+    border: 2px solid white;
+    padding: 7px;
+    text-align: justify;
+}

@@ -10,7 +10,7 @@ try {
 } catch (e) { }
 
 describe("TW2.2 searchDishes", function tw2_2_20() {
-  this.timeout(200000);
+  this.timeout(200000000);
 
   before(function tw2_2_20_before() {
     if (!searchDishes) this.skip();
