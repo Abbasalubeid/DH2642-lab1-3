@@ -7,6 +7,8 @@ const PREFIX=window.location.toString().includes("react")?"reactjs":"vuejs";
 
 const Summary=require("../"+PREFIX+"/summaryPresenter.js").default;
 const Sidebar=require("../"+PREFIX+"/sidebarPresenter.js").default;
+const Search=require("../"+PREFIX+"/searchPresenter.js").default;
+const Details=require("../"+PREFIX+"/detailsPresenter.js").default;
 
 export default
 function App(props){
@@ -14,6 +16,8 @@ function App(props){
                 {/* TODO TW1.2 Sidebar will be added here, inside a DIV, like Summary below */}
                 <div><Sidebar model={props.model} /></div>
                 <div><Summary model={props.model} /></div>
+                <div><Search model={props.model} /></div>
+                <div><Details model={props.model} /></div>
             </div>
            );
 }

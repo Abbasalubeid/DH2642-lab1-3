@@ -1,26 +1,29 @@
 function SearchFormView (props){
     return (
         <div>
-            <input  onInput={eventPrinterACB} placeholder="Search..." type="search"></input>
-            <select onInput={eventPrinterACB}>
-                <option>Choose:</option>
+            <input  onChange={userTypedACB} placeholder="Search..." type="search"></input>
+            <select onChange={usesChoseACB}>
+                <option value= "">Choose:</option>
                 {props.dishTypeOptions.map(onSelectCB)}
             </select>
-            <button onClick={searchIsClickedACB}>Search!</button>
+            <button onClick={userSearchedACB}>Search!</button>
         </div>
     );
 
-    function searchIsClickedACB(e){
-        console.log(e.target.value)
+    function userTypedACB(e){
+        props.onUserTyped(e.target.value)
     }
 
-    function eventPrinterACB(e){
-        console.log(e.target.value)
+    function usesChoseACB(e){
+        props.onUserChose(e.target.value)
+    }
+    function userSearchedACB(){
+        props.onUserSearched()
     }
 
-        function onSelectCB(String){
-            return <option>{String}</option>
-        }
+    function onSelectCB(string){
+        return <option value={string}>{string}</option>
+    }
 
 }
 
