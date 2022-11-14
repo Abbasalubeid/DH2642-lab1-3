@@ -3,10 +3,7 @@ function SearchResultsView (props){
         <div>
             {
                 props.searchResults.map(picturingCB)
-<<<<<<< HEAD
                 
-=======
->>>>>>> abbas
             }
         </div>
 
