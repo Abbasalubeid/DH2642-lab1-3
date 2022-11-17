@@ -1,13 +1,13 @@
 function SearchFormView (props){
     return (
-        <div class="searchForm">
-            <input  onChange={userTypedACB} placeholder="What do you want for food" type="search" class="searchInput" title="Search any dish">
+        <div className="searchForm">
+            <input  onChange={userTypedACB} placeholder="What do you want for food" type="search" className="searchInput" title="Search any dish">
                 </input>
-            <select onChange={usesChoseACB} class="searchSelector" type="select">
+            <select onChange={usesChoseACB} className="searchSelector" >
                 <option value= "">Choose:</option>
                 {props.dishTypeOptions.map(onSelectCB)}
             </select>
-            <button onClick={userSearchedACB} class="searchButton"><b>Search!</b></button>
+            <button onClick={userSearchedACB} className="searchButton"><b>Search!</b></button>
         </div>
     );
 
@@ -23,7 +23,7 @@ function SearchFormView (props){
     }
 
     function onSelectCB(string){
-        return <option value={string}>{string}</option>
+        return <option key={string}>{string}</option>
     }
 
 }
