@@ -291,43 +291,4 @@ function deepFreeze(object) {
 
 deepFreeze(dishesConst);
 
-// dish1 = {
-//     id: 1,
-//     title: 'French toast',
-//     dishTypes: ['snack', 'appetizer'],
-//     pricePerServing: 21.34,
-//     summary: "In a large mixing bowl, beat the eggs. Add the milk, brown sugar and nutmeg; stir well to combine. Soak bread slices in the egg mixture until saturated. Heat a lightly oiled griddle or frying pan over medium high heat. Brown slices on both sides, sprinkle with cinnamon and serve hot.",
-//     extendedIngredients: [{
-//         id:1101,
-//         name: 'egg',
-//         unit: 'pcs',
-//         aisle: 'Egg & Dairy',
-//         amount: 1,
-//     },{
-//         id:1102,
-//         name: 'milk',
-//         amount: 30,
-//         unit: 'ml',
-//         aisle: 'Eggs & Dairy'
-//     }, {
-//         name: 'sugar',
-//         id: 1103,
-//         aisle: 'Baking',
-//         amount: 7,
-//         unit: 'g',
-//     }, {
-//         name: 'ground nutmeg',
-//         id: 1104,
-//         aisle: 'Baking',
-//         amount: 0.5,
-//         unit: 'g',
-//     }, {
-//         name: 'white bread',
-//         id: 1105,
-//         aisle: 'Bakery',
-//         amount: 2,
-//         unit: 'slices',
-//     }]
-// };
-
 export default dishesConst;
