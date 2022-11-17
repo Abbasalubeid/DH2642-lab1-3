@@ -23,7 +23,7 @@ function SearchFormView (props){
     }
 
     function onSelectCB(string){
-        return <option value={string}>{string}</option>
+        return <option key={string}>{string}</option>
     }
 
 }
