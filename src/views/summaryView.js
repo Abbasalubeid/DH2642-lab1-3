@@ -6,6 +6,10 @@ function SummaryView(props){
     function goBackToSearchACB(){
         window.location.hash= "#search";
     }
+    function goToSidebarACB(){
+        window.location.hash= "#sidebar";
+    }
+
 
     return (
             <div className="debug">
@@ -19,7 +23,8 @@ function SummaryView(props){
                        renderIngredients(props.ingredients, props.people) */
                     renderIngredients(props.ingredients, props.people)
                 }
-                <button onClick={goBackToSearchACB} className="searchButton">Back to Search</button>
+                <button onClick={goBackToSearchACB} className="backToSeachButton">Back to Search</button>
+                {/* <button onClick={goToSidebarACB} className="backToSearch"><a href="#sidebar">Sidebar</a></button> */}
                 </div>
             </div>
     );
