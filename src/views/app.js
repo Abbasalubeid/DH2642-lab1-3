@@ -9,14 +9,15 @@ const Summary=require("../"+PREFIX+"/summaryPresenter.js").default;
 const Sidebar=require("../"+PREFIX+"/sidebarPresenter.js").default;
 const Search=require("../"+PREFIX+"/searchPresenter.js").default;
 const Details=require("../"+PREFIX+"/detailsPresenter.js").default;
+const Show=require("../"+PREFIX+"/show.js").default;
 
 export default
 function App(props){
     return (<div class= "flexParent">
-                <div class="search-app"><Search model={props.model} /></div>
-                <div class="detail-app"><Details model={props.model} /></div>
-                <div class="sidebar"><Sidebar model={props.model} /></div>
-                <div class ="mainContent"><Summary model={props.model} /></div>
+                <Show hash="#search"><Search model={props.model} /></Show> 
+                <Show hash="#details"><Details model={props.model} /></Show> 
+                <Show hash="#sidebar"><Sidebar model={props.model}  /></Show> 
+                <Show hash="#summary"><Summary model={props.model} /></Show> 
             </div>
            );
 }

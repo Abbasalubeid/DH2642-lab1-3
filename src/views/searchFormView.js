@@ -8,6 +8,8 @@ function SearchFormView (props){
                 {props.dishTypeOptions.map(onSelectCB)}
             </select>
             <button onClick={userSearchedACB} className="searchButton">Search!</button>
+            <button onClick={goToSummaryACB} className="searchButton">Summary</button>
+
         </div>
     );
 
@@ -24,6 +26,10 @@ function SearchFormView (props){
 
     function onSelectCB(string){
         return <option key={string}>{string}</option>
+    }
+
+    function goToSummaryACB(){
+        window.location.hash= "#summary";
     }
 
 }

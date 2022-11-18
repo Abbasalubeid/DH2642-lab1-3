@@ -2,6 +2,11 @@
 import  {sortIngredients}  from "../utilities.js"
 
 function SummaryView(props){
+
+    function goBackToSearchACB(){
+        window.location.hash= "#search";
+    }
+
     return (
             <div className="debug">
                 {/* <div className="text">Summary for <span title="nr guests">{props.people}</span> persons: </div> */}
@@ -14,6 +19,7 @@ function SummaryView(props){
                        renderIngredients(props.ingredients, props.people) */
                     renderIngredients(props.ingredients, props.people)
                 }
+                <button onClick={goBackToSearchACB} className="searchButton">Back to Search</button>
                 </div>
             </div>
     );

@@ -6,8 +6,6 @@ import { searchDishes } from "../dishSource.js";
 import promiseNoData from "../views/promiseNoData.js"
 
 export default function SearchPresenter(props) {
-  // const [searchQuery, setQuery]= React.useState();
-  // const [searchType, setSearchType]= React.useState();
   const [searchParams, setSearchParams] = React.useState({});
   const [promiseState] = React.useState({});
   const [, reRender] = React.useState();
@@ -16,7 +14,6 @@ export default function SearchPresenter(props) {
     resolvePromise1(searchDishes(searchParams), promiseState, notifyACB);
   }
   
-
   function notifyACB() {
     const newProm = {};
     reRender(newProm);
@@ -29,18 +26,18 @@ export default function SearchPresenter(props) {
     setSearchParams(obj);
   }
 
-  function handleInputACB2(string) {
+  function handleSelectionACB(string) {
     const obj = {};
     obj.type = string;
     obj.query = searchParams.query;
     setSearchParams(obj);
   }
 
-  function handleInputACB3() {
+  function handleSearchButtonACB() {
     resolvePromise1(searchDishes(searchParams), promiseState, notifyACB);
   }
 
-  function handleInputACB4(dish) {
+  function UpdateCurrentDishACB(dish) {
     props.model.setCurrentDish(dish.id)
   }
 
@@ -49,13 +46,13 @@ export default function SearchPresenter(props) {
       <SearchFormView
         dishTypeOptions={["starter", "main course", "dessert"]}
         onUserTyped={handleInputACB1}
-        onUserChose={handleInputACB2}
-        onUserSearched={handleInputACB3}
+        onUserChose={handleSelectionACB}
+        onUserSearched={handleSearchButtonACB}
       />
       {promiseNoData(promiseState) || 
         <SearchResultsView
           searchResults={promiseState.data}
-          onUserChoseDish={handleInputACB4}
+          onUserChoseDish={UpdateCurrentDishACB}
         />
       }
     </div>

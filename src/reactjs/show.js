@@ -15,10 +15,5 @@ export default function Show(props) {
 
     React.useEffect(componentWasCreatedACB, []);
 
-    // if (props.hash === hashState)
-    // return <div>{ props.children }</div>;
-    // else
-    //     return false;
-
     return (<div className={hashState === props.hash? " " : "hidden" }>{ props.children }</div>);
 }

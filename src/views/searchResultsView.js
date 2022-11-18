@@ -17,6 +17,7 @@ function SearchResultsView (props){
 
     function eventPrinterACB(){
         props.onUserChoseDish(dish)
+        window.location.hash="#details";
     }
 
 }

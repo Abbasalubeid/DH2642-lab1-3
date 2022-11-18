@@ -15,21 +15,19 @@ function DetailsView(props) {
             </div>
             <div>
                 <button onClick={addToMenuACB} disabled={props.isDishInMenu}>Add to menu!</button>
-                <button onClick={eventPrinterACB} disabled={!props.isDishInMenu}>Cancel</button>
+                <button onClick={cancelIsClickedACB} disabled={!props.isDishInMenu}>Cancel</button>
             </div>
         </div>
 
     );
 
-    function eventPrinterACB(e) {
-        console.log(e.target.value)
+    function cancelIsClickedACB(e) {
+        window.location.hash= "#search";
     }
-    // function addDishACB(){
-    //     props.addDish(dish)
-    //   }
 
     function addToMenuACB() {
         props.onAddToMenu();
+        window.location.hash= "#search";
     }
 
     // function cancelAddingACB(){

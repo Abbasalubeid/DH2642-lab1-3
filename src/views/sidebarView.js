@@ -32,7 +32,7 @@ function SidebarView(props) {
     function dishTableRowCB(dish) {
       return <tr key={dish.id} className="sidebar-trText">
         <td><button onClick={xIsClickedACB} className="btn-style" title="Click to remove">x</button></td>
-        <td><a onClick={nameTagIsClickedACB} href="#" className="link">{dish.title}</a></td>
+        <td><a onClick={nameTagIsClickedACB} href="#details" className="link">{dish.title}</a></td>
         <td className="rightFix">{dishType(dish)}</td>
         <td className="rightFix">{(dish.pricePerServing * people).toFixed(2)}</td>
       </tr>;
