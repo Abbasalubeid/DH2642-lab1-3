@@ -1,15 +1,15 @@
 function DetailsView (props){
     return (
-        <div class="search-dishes">
-            <div class="div">
-                <div class="detailsView">
-                    <img height="100" src={props.dishData.image} class="image detailsimg"></img>
-                    <div class="txt1"><b>Price {(props.dishData["pricePerServing"]).toFixed(2)} <br/>
+        <div className="search-dishes">
+            <div className="div">
+                <div className="detailsView">
+                    <img height="100" src={props.dishData.image} className="image detailsimg"></img>
+                    <div className="txt1"><b>Price {(props.dishData["pricePerServing"]).toFixed(2)} <br/>
                     For {props.guests} guests: {(props.dishData["pricePerServing"] * props.guests).toFixed(2)} </b></div>
                 </div>
                 {renderIngredients(props.dishData.extendedIngredients, props.guests)}
                 
-                <div class="instr">{props.dishData.instructions}</div>
+                <div className="instr">{props.dishData.instructions}</div>
 
             <a href={props.dishData.sourceUrl}>More information</a>
         </div>
@@ -38,7 +38,7 @@ function DetailsView (props){
 
     function renderIngredients(ingredientArray){
         function ingredientTableRowCB(ingr){
-            return <tr key={ingr.id}><td>{ingr.name}:</td> <td class="rightFix">{(ingr.amount).toFixed(2)} 
+            return <tr key={ingr.id}><td>{ingr.name}:</td> <td className="rightFix">{(ingr.amount).toFixed(2)} 
             </td><td>{ingr.unit} </td></tr>;
         }
         

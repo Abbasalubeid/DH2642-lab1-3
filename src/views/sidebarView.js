@@ -8,11 +8,11 @@ function SidebarView(props){
 
     return (
             <div>
-              <div class="sidebar-firtdiv">
+              <div className="sidebar-firtdiv">
                 <button disabled={ props.number === 1}
-                        onClick={minusButtonIsClickedACB} class="button btn1" title="Click to decrease nr of guest"><b>-</b></button>
-                        <p class="number"><b>{props.number}</b></p>      
-                <button onClick={plusButtonIsClickedACB} class="button btn2" title="Click to increase nr of guest"><b>+</b></button>
+                        onClick={minusButtonIsClickedACB} className="button btn1" title="Click to decrease nr of guest"><b>-</b></button>
+                        <p className="number"><b>{props.number}</b></p>      
+                <button onClick={plusButtonIsClickedACB} className="button btn2" title="Click to increase nr of guest"><b>+</b></button>
                 </div>
                 { dishRendering(props.dishes, props.number)}
             </div>
@@ -30,11 +30,11 @@ function SidebarView(props){
       function dishRendering(dishArray, people){
 
         function dishTableRowCB(dish){
-            return <tr key={dish.id} class="sidebar-trText">
-                        <td><button onClick={xIsClickedACB} class="btn-style" title="Click to remove">x</button></td> 
-                        <td><a onClick={nameTagIsClickedACB} href="#" class="link">{dish.title}</a></td> 
-                        <td class="rightFix">{dishType(dish)}</td>
-                        <td class="rightFix">{(dish.pricePerServing*people).toFixed(2)}</td>
+            return <tr key={dish.id} className="sidebar-trText">
+                        <td><button onClick={xIsClickedACB} className="btn-style" title="Click to remove">x</button></td> 
+                        <td><a onClick={nameTagIsClickedACB} href="#" className="link">{dish.title}</a></td> 
+                        <td className="rightFix">{dishType(dish)}</td>
+                        <td className="rightFix">{(dish.pricePerServing*people).toFixed(2)}</td>
                    </tr>;
 
 
