@@ -15,6 +15,7 @@ export default function SearchPresenter(props) {
   if (!promiseState.promise) {
     resolvePromise1(searchDishes(searchParams), promiseState, notifyACB);
   }
+  
 
   function notifyACB() {
     const newProm = {};
@@ -43,19 +44,6 @@ export default function SearchPresenter(props) {
     props.model.setCurrentDish(dish.id)
   }
 
-  function userTypedACB(string) {
-    props.model.setSearchQuery(string);
-  }
-
-  function userChoseACB(string) {
-    props.model.setSearchType(string);
-  }
-
-  function userSearchedACB() {
-    props.model.doSearch(props.model.searchParams);
-  }
-
-  function userChoseDishACB(dish){props.model.setCurrentDish(dish.id)}
   return (
     <div>
       <SearchFormView

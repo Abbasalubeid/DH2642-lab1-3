@@ -6,7 +6,7 @@ export default
 function DetailsPresenter(props){
         const [number, copyNumber] = React.useState(props.model.numberOfGuests);
         const [dishes, copyDishes] = React.useState(props.model.dishes);
-        const [currentDish, copyCurrentDish] = React.useState(props.model.currentDish);
+        // const [currentDish, copyCurrentDish] = React.useState(props.model.currentDish);
         const [promise, copyPromiseStatePromise] = React.useState(props.model.currentDishPromiseState.promise);
         const [data, copyPromiseStateData] = React.useState(props.model.currentDishPromiseState.data);
         const [error, copyPromiseStateError] = React.useState(props.model.currentDishPromiseState.error);
@@ -32,12 +32,14 @@ function DetailsPresenter(props){
 
         function userAddedToMenu(){ props.model.addToMenu(props.model.currentDishPromiseState.data)}
 
+        function findDishIdCB(dish){
+            return dish.id === props.model.currentDish;
+        }
+
         return promiseNoData(props.model.currentDishPromiseState) || <DetailsView dishData={props.model.currentDishPromiseState.data}
         isDishInMenu={props.model.dishes.find(findDishIdCB)}
         guests={props.model.numberOfGuests}
         onAddToMenu={userAddedToMenu}/>;
 
-            function findDishIdCB(dish){
-                     return dish.id === props.model.currentDish;
-            }
+
 }
