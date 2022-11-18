@@ -5,13 +5,17 @@ import promiseNoData from "../views/promiseNoData.js";
 export default
 function DetailsPresenter(props){
         const [number, copyNumber] = React.useState(props.model.numberOfGuests);
+        const [dishes, copyDishes] = React.useState(props.model.dishes);
+        const [currentDish, copyCurrentDish] = React.useState(props.model.currentDish);
         const [promise, copyPromiseStatePromise] = React.useState(props.model.currentDishPromiseState.promise);
         const [data, copyPromiseStateData] = React.useState(props.model.currentDishPromiseState.data);
         const [error, copyPromiseStateError] = React.useState(props.model.currentDishPromiseState.error);
-        
+
         //  copy the value in component state	
         function observerACB() {    // no need for payload
             copyNumber(props.model.numberOfGuests);
+            copyDishes(props.model.dishes);
+            copyDishes(props.model.currentDish);
             copyPromiseStatePromise(props.model.currentDishPromiseState.promise);
             copyPromiseStateData(props.model.currentDishPromiseState.data);
             copyPromiseStateError(props.model.currentDishPromiseState.error);

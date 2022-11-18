@@ -4,24 +4,14 @@ import SidebarView from "../views/sidebarView";
 
 export default
     function SidebarPresenter(props) {
-    // const [number, copyNumber]=React.useState(props.model.numberOfGuests);
-    // const [dishes, copyDishes]=React.useState(props.model.currentDish);
+    const [number, copyNumber] = React.useState(props.model.numberOfGuests);
+    const [dishes, copyDishes] = React.useState(props.model.dishes);
 
-    // // much more can be copied, e.g. props.model.somePromiseState.data
-    //  //  copy the value in component state	
-    // function observerACB(){    // no need for payload
-    //     copyNumber(props.model.numberOfGuests);    // when notified, update state with current value
-    //     copyDishes(props.model.currentDish); // when notified, update state with current value
-    // }
-
-    const [, reRender] = React.useState(props.model.numberOfGuests);
-
-    function observerACB(payload) {    // no need for payload
-        if (payload && payload.setNrGuests)
-            // assuming that setNrGuests is the payload sent by setNumberOfGuests
-            reRender(new Object());
+    //  copy the value in component state	
+    function observerACB() {    // no need for payload
+        copyNumber(props.model.numberOfGuests);    // when notified, update state with current value
+        copyDishes(props.model.dishes); // when notified, update state with current value
     }
-
 
     function wasCreatedACB() {
         console.log("component created!");                           // 1. the component has been created
@@ -33,10 +23,9 @@ export default
     }
     React.useEffect(wasCreatedACB, []);
 
-    // function handleEventACB(e){props.model.setNumberOfGuests(x);}  
     function removeDishACB(dishToRemove) { props.model.removeFromMenu(dishToRemove) }
 
-    function clickOnDishNameACB(dishToSet) { props.model.setCurrentDish(dishToSet) }
+    function clickOnDishNameACB(dishToSet) { props.model.setCurrentDish(dishToSet.id) }
 
     function updateNumberACB(number) { props.model.setNumberOfGuests(number) }
 
