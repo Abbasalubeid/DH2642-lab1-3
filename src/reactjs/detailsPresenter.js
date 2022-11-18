@@ -6,7 +6,6 @@ export default
 function DetailsPresenter(props){
         const [number, copyNumber] = React.useState(props.model.numberOfGuests);
         const [dishes, copyDishes] = React.useState(props.model.dishes);
-        // const [currentDish, copyCurrentDish] = React.useState(props.model.currentDish);
         const [promise, copyPromiseStatePromise] = React.useState(props.model.currentDishPromiseState.promise);
         const [data, copyPromiseStateData] = React.useState(props.model.currentDishPromiseState.data);
         const [error, copyPromiseStateError] = React.useState(props.model.currentDishPromiseState.error);
