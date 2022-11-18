@@ -11,11 +11,11 @@ function DetailsView(props) {
 
                 <div className="instr">{props.dishData.instructions}</div>
 
-                <a href={props.dishData.sourceUrl}>More information</a>
+                <a id="linkToInfo" href={props.dishData.sourceUrl}>More information</a>
             </div>
             <div>
-                <button onClick={addToMenuACB} disabled={props.isDishInMenu}>Add to menu!</button>
-                <button onClick={cancelIsClickedACB} disabled={!props.isDishInMenu}>Cancel</button>
+                <button className="detailsButtons" onClick={addToMenuACB} disabled={props.isDishInMenu}>Add to menu!</button>
+                <button className="detailsButtons" onClick={cancelIsClickedACB} disabled={!props.isDishInMenu}>Cancel</button>
             </div>
         </div>
 

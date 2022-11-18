@@ -11,6 +11,10 @@ body{
     flex-grow: inherit;
     flex-wrap: wrap;
 }
+
+.hidden{
+    display: none;
+}
 /********************************Sidebar style********************************/
 .sidebar-firtdiv{
     display: flex;
@@ -106,6 +110,15 @@ hr{
     width: 100%;
     height: 100%;
 }
+
+.backToSeachButton{
+    width: 120px;
+    height: 40px;
+    border: 3px solid #292838;
+    border-radius: 60px;
+    margin: 10px 7px 10px;
+    font-size: 15px;
+}
 /********************************Small device style********************************/
 
 @media (min-width: 768px){
@@ -129,17 +142,8 @@ hr{
         flex: 0.7;
         display: inline-block;
     }
-    .searchResult{
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-end;
-    }
     .searchResult span{
-        width: 100%;
         height: 100%;
-        /* flex-shrink: 10px; */
-        flex-wrap: wrap;
-        flex-basis: flex-start;
     }
 
 }
@@ -191,20 +195,21 @@ hr{
     margin: 5px;
     display: flex;
     flex-direction: row;
-    /* vertical-align: bottom; */
+    position: relative;
+    align-items: center;
+    justify-content: space-around;
+    align-items: stretch;
+    flex-wrap: wrap;
 }
 .searchResult span{
     border: 2px solid #292838;
     border-radius: 15px;
-    /* width: 100%; */
-    /* height: auto; */
     margin: 5px;
-    /* justify-content:baseline; */
-    /* align-self: flex; */
-
+    padding: 5px;
+    width: 250px;
 }
 .searchResult img{
-    width: 90%;
+    width: 99%;
     cursor: pointer;
 }
 .searchResult div{
@@ -226,12 +231,19 @@ hr{
 /********************************DetailsView style********************************/
 .search-dishes{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 }
 .div{
     border: 2px solid black;
-    border-radius: 5px;
-    margin: 0;
+    border-radius: 55px;
+    padding: 20px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    justify-content: center;
+    align-content: center;
 }
 .detailsView{
     width: auto;
@@ -256,13 +268,35 @@ div.txt1{
 }
 
 .instr{
-    border: 2px solid white;
+    border: 2px solid black;
     padding: 7px;
     text-align: justify;
+    justify-content: center;
 }
 
-.hidden{
-    display: none;
+#linkToInfo{
+    width: 200px;
+    height: 30px;
+    padding: 5px;
+    border: 2px solid black;
+    border-radius: 65px;
+    margin: 10px;
+    font-size: 20px;
+    background-color: #dde5b6;
 }
+
+.detailsButtons{
+    width: 120px;
+    height: 40px;
+    border: 3px solid #292838;
+    border-radius: 60px;
+    margin: 10px 7px 10px;
+    font-size: 15px;
+    color: black;
+    font-weight: 2em;
+    background-color: #a2d2ff;
+}
+
+
 
 

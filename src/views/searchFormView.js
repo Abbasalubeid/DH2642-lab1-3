@@ -9,7 +9,6 @@ function SearchFormView (props){
             </select>
             <button onClick={userSearchedACB} className="searchButton">Search!</button>
             <button onClick={goToSummaryACB} className="searchButton">Summary</button>
-
         </div>
     );
 
