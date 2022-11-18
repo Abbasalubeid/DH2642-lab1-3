@@ -7,7 +7,7 @@ function SearchFormView (props){
                 <option value= "">Choose:</option>
                 {props.dishTypeOptions.map(onSelectCB)}
             </select>
-            <button onClick={userSearchedACB} className="searchButton"><b>Search!</b></button>
+            <button onClick={userSearchedACB} className="searchButton">Search!</button>
         </div>
     );
 

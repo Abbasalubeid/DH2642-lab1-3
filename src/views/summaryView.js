@@ -3,8 +3,8 @@ import  {sortIngredients}  from "../utilities.js"
 
 function SummaryView(props){
     return (
-            <div class="debug">
-                {/* <div class="text">Summary for <span title="nr guests">{props.people}</span> persons: </div> */}
+            <div className="debug">
+                {/* <div className="text">Summary for <span title="nr guests">{props.people}</span> persons: </div> */}
                 Summary for <span title="nr guests">{props.people}</span> persons:
                 <div>
                 {  //  <---- we are in JSX; with this curly brace, we go back to JavaScript, and can write JS code and comments.
@@ -23,7 +23,7 @@ function SummaryView(props){
 /* This is an ordinary JS function, not a component. It will be invoked from the component above */
 function renderIngredients(ingredientArray, people){
     function ingredientTableRowCB(ingr){
-        return <tr key={ /* TODO what's a key? */ingr.id}><td>{ingr.name}</td> <td>{ingr.aisle}</td><td class="rightFix">{(ingr.amount*people).toFixed(2)} 
+        return <tr key={ /* TODO what's a key? */ingr.id}><td>{ingr.name}</td> <td>{ingr.aisle}</td><td className="rightFix">{(ingr.amount*people).toFixed(2)} 
         </td><td>{ingr.unit} </td></tr>;
     }
     

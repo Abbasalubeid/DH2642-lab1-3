@@ -15,35 +15,35 @@ function treatHTTPResponseACB(response) {
 }
 
 function getDishDetails(dishID) {
-    return fetch(BASE_URL+"recipes/"+dishID+"/information",
+    return fetch(BASE_URL + "recipes/" + dishID + "/information",
 
-     { // object literal
-        "method": "GET", // HTTP method
-        "headers": { // HTTP headers, also object literal
-            'X-Mashape-Key': API_KEY,
-            "x-rapidapi-host": "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com",
-        } // end of headers object
-    } /* end of second fetch parameter, object */ )
-    .then(treatHTTPResponseACB)
+        { // object literal
+            "method": "GET", // HTTP method
+            "headers": { // HTTP headers, also object literal
+                'X-Mashape-Key': API_KEY,
+                "x-rapidapi-host": "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com",
+            } // end of headers object
+        } /* end of second fetch parameter, object */)
+        .then(treatHTTPResponseACB)
 }
 
-function transformResultACB(object){
-   return object.results;
+function transformResultACB(object) {
+    return object.results;
 }
 
 function searchDishes(dishObject) {
 
-  const query = new URLSearchParams(dishObject)
-  return fetch(BASE_URL+"recipes/search?"+query.toString(),
+    const query = new URLSearchParams(dishObject)
+    return fetch(BASE_URL + "recipes/search?" + query.toString(),
 
-  { // object literal
-     "method": "GET", // HTTP method
-     "headers": { // HTTP headers, also object literal
-         'X-Mashape-Key': API_KEY,
-         "x-rapidapi-host": "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com",
-     } // end of headers object
- } /* end of second fetch parameter, object */ )
- .then(treatHTTPResponseACB).then(transformResultACB)
+        { // object literal
+            "method": "GET", // HTTP method
+            "headers": { // HTTP headers, also object literal
+                'X-Mashape-Key': API_KEY,
+                "x-rapidapi-host": "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com",
+            } // end of headers object
+        } /* end of second fetch parameter, object */)
+        .then(treatHTTPResponseACB).then(transformResultACB)
 }
 
 
