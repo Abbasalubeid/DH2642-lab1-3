@@ -56,7 +56,6 @@ export default function SearchPresenter(props) {
   }
 
   function userChoseDishACB(dish){props.model.setCurrentDish(dish.id)}
-
   return (
     <div>
       <SearchFormView
