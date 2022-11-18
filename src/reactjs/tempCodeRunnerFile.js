@@ -1,1 +1,0 @@
-            copyDishes(props.model.dishes);
