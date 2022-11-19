@@ -40,10 +40,7 @@ function updateFirebaseFromModel(model) {
             
             if(payload.hasOwnProperty('removedDish'))
                 firebase.database().ref(REF+"/dishes/"+payload.removedDish.id).set(null);
-
         }
-            
-        
     }
 
     model.addObserver(persistenceObserverACB);
@@ -51,7 +48,11 @@ function updateFirebaseFromModel(model) {
 
 function updateModelFromFirebase(model) {
     //TODO
-    return;
+    firebase.database().ref(REF+"/guests").on("value", 
+   function guestsChangedInFirebaseACB(firebaseData){ model.setNumberOfGuests(firebaseData.val());}
+);
+
+
 }
 
 // Remember to uncomment the following line:
