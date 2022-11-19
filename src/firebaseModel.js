@@ -33,8 +33,6 @@ function firebaseModelPromise() {
         }
     }
     
-    
-
         return firebase.database().ref(REF).once("value").then(makeBigPromiseACB).catch(Error);
 }
 
