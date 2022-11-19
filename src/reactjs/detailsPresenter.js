@@ -11,7 +11,7 @@ function DetailsPresenter(props){
         const [error, copyPromiseStateError] = React.useState(props.model.currentDishPromiseState.error);
 
         //  copy the value in component state	
-        function observerACB() {    // no need for payload
+        function observerACB() {    
             copyNumber(props.model.numberOfGuests);
             copyDishes(props.model.dishes);
             copyDishes(props.model.currentDish);
@@ -20,9 +20,9 @@ function DetailsPresenter(props){
             copyPromiseStateError(props.model.currentDishPromiseState.error);
         }
         function wasCreatedACB() {
-            console.log("component created!");                           // 1. the component has been created
+            console.log("component created!");                           
             props.model.addObserver(observerACB);
-            return function isTakenDownACB() {                                // 2. the component is being taken down 
+            return function isTakenDownACB() {                                
                 props.model.removeObserver(observerACB);
                 console.log("component created!");
             };
