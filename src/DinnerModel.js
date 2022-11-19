@@ -69,7 +69,7 @@ class DinnerModel {
   setNumberOfGuests(nr) {
     // if() and throw exercise
     if (!Number.isInteger(nr) || nr < 1)
-      throw "number of guests not a positive integer";
+      throw Error("number of guests not a positive integer");
     else if (nr !== this.numberOfGuests) {
       this.numberOfGuests = nr;
       const payload = { newNumberOfGuests: nr };
