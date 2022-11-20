@@ -22,7 +22,7 @@ function observerRecap(model) {
 function firebaseModelPromise() {
     
     function makeBigPromiseACB(firebaseData) {
-        if(firebaseData.val !== null){
+        if(firebaseData.val()){
            
         function makeDishPromiseCB(dishId){ return getDishDetails(dishId); }
         const dishPromiseArray = Object.keys(firebaseData.val().dishes).map(makeDishPromiseCB);
@@ -33,7 +33,7 @@ function firebaseModelPromise() {
         }
     }
     
-        return firebase.database().ref(REF).once("value").then(makeBigPromiseACB).catch(Error);
+        return firebase.database().ref(REF).once("value").then(makeBigPromiseACB);
 }
 
 function updateFirebaseFromModel(model) {
