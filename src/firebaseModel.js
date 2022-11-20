@@ -21,22 +21,22 @@ function observerRecap(model) {
 
 function firebaseModelPromise() {
     
-    function makeBigPromiseACB(firebaseData) {        
+    function allInOnePromiseACB(firebaseData) {        
            
-        function makeDishPromiseCB(dishId){ return getDishDetails(dishId); }
+        function makeAllPromisesCB(dishId){ return getDishDetails(dishId); }
 
-        let dishArray = firebaseData.val()?.dishes ?? [];
-        let guests = firebaseData.val()?.guests ?? 2;
+        const dishArray = firebaseData.val()?.dishes ?? [];
+        const guests = firebaseData.val()?.guests ?? 2;
 
-        let dishPromiseArray = Object.keys(dishArray).map(makeDishPromiseCB);
+        const arrayWithPromises = Object.keys(dishArray).map(makeAllPromisesCB);
 
-        function createmodelACB(dishes){ return new DinnerModel(guests, dishes);}
+        function newModelACB(dishes){ return new DinnerModel(guests, dishes);}
         
-        return Promise.all(dishPromiseArray).then(createmodelACB);
+        return Promise.all(arrayWithPromises).then(newModelACB);
         
     }
     
-        return firebase.database().ref(REF).once("value").then(makeBigPromiseACB);
+        return firebase.database().ref(REF).once("value").then(allInOnePromiseACB);
 }
 
 function updateFirebaseFromModel(model) {
