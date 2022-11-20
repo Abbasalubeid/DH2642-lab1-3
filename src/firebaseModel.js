@@ -70,14 +70,14 @@ function updateModelFromFirebase(model) {
    
    firebase.database().ref(REF+"/dishes/").on("child_added",
    function dishAddedInFirebaseACB(firebaseData){
-    function hasNotSameIDCB(dish){
-        if (dish.id === +firebaseData.key)
-            return true;
-        else
-        return false;    
-    }
-    if(!model.dishes.filter(hasNotSameIDCB).length > 0)
-    getDishDetails(+firebaseData.key).then(function addFetchedDish(dish){model.addToMenu(dish)})});
+        function hasNotSameIDCB(dish){
+            if (dish.id === +firebaseData.key)
+                return true;
+            else
+            return false;    
+        }
+            if(!model.dishes.filter(hasNotSameIDCB).length > 0)
+            getDishDetails(+firebaseData.key).then(function addFetchedDish(dish){model.addToMenu(dish)})});
    
    firebase.database().ref(REF+"/dishes/").on("child_removed",
    function dishRemovedInFirebaseACB(firebaseData){
