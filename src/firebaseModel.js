@@ -76,8 +76,8 @@ function updateModelFromFirebase(model) {
             else
             return false;    
         }
-            if(!model.dishes.filter(hasNotSameIDCB).length > 0)
-            getDishDetails(+firebaseData.key).then(function addFetchedDish(dish){model.addToMenu(dish)})});
+        if(!model.dishes.filter(hasNotSameIDCB).length > 0)
+        getDishDetails(+firebaseData.key).then(function addFetchedDish(dish){model.addToMenu(dish)})});
    
    firebase.database().ref(REF+"/dishes/").on("child_removed",
    function dishRemovedInFirebaseACB(firebaseData){
