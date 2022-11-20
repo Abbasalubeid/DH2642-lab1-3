@@ -24,7 +24,6 @@ function DetailsPresenter(props){
             props.model.addObserver(observerACB);
             return function isTakenDownACB() {                                
                 props.model.removeObserver(observerACB);
-                console.log("component created!");
             };
         }
         React.useEffect(wasCreatedACB, []);

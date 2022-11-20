@@ -8,7 +8,7 @@ export default
     const [number, copyNumber] = React.useState(props.model.numberOfGuests);
     const [ingredients, copyIngredients] = React.useState(props.model.dishes);
     //  copy the value in component state	
-    function observerACB() {    // no need for payload
+    function observerACB() {   
         copyNumber(props.model.numberOfGuests);
         copyIngredients(props.model.dishes);
     }
@@ -17,7 +17,6 @@ export default
         props.model.addObserver(observerACB);
         return function isTakenDownACB() {                                // 2. the component is being taken down 
             props.model.removeObserver(observerACB);
-            console.log("component created!");
         };
     }
     React.useEffect(wasCreatedACB, []);
