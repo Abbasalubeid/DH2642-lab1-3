@@ -6,9 +6,6 @@ function DetailsPresenter(props){
 
     function userAddedToMenu(){ props.model.addToMenu(props.model.currentDishPromiseState.data)}
 
-    // Extra
-    // function userCanceled(){ props.model.removeFromMenu(props.model.currentDishPromiseState.data)}
-
 return promiseNoData(props.model.currentDishPromiseState) || <DetailsView dishData={props.model.currentDishPromiseState.data}
                     isDishInMenu={props.model.dishes.find(findDishIdCB)}
                     guests={props.model.numberOfGuests}
