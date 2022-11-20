@@ -21,16 +21,19 @@ function observerRecap(model) {
 
 function firebaseModelPromise() {
     
-    function makeBigPromiseACB(firebaseData) {
-        if(firebaseData.val()){
+    function makeBigPromiseACB(firebaseData) {        
            
         function makeDishPromiseCB(dishId){ return getDishDetails(dishId); }
-        const dishPromiseArray = Object.keys(firebaseData.val().dishes).map(makeDishPromiseCB);
 
-        function createmodelACB(dishes){ return new DinnerModel(firebaseData.val().guests, dishes);}
+        let dishArray = firebaseData.val()?.dishes ?? [];
+        let guests = firebaseData.val()?.guests ?? 2;
+
+        let dishPromiseArray = Object.keys(dishArray).map(makeDishPromiseCB);
+
+        function createmodelACB(dishes){ return new DinnerModel(guests, dishes);}
         
         return Promise.all(dishPromiseArray).then(createmodelACB);
-        }
+        
     }
     
         return firebase.database().ref(REF).once("value").then(makeBigPromiseACB);
