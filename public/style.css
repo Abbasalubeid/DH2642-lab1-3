@@ -131,7 +131,7 @@ hr{
     }
 
     div.sidebar{
-        width: 100%;
+        width: 200px;
         margin-top: 40px;
         flex: 0.3;
         display: inline-block;
@@ -296,6 +296,7 @@ div.txt1{
     font-weight: 2em;
     background-color: #a2d2ff;
 }
+
 
 
 
