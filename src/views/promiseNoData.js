@@ -4,7 +4,7 @@ function promiseNoData(promiseState){
     return <div>no data</div>
 
     if(!promiseState.data && !promiseState.error)
-         return <img height="250" src="loading_anim.gif"></img>
+         return <img height="250" src="https://i.gifer.com/WMDx.gif"></img>
 
     if(promiseState.error)
         return <div>{promiseState.error.toString()}</div>

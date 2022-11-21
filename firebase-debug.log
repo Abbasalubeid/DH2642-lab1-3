@@ -1,0 +1,33 @@
+[debug] [2022-11-21T10:52:42.748Z] ----------------------------------------------------------------------
+[debug] [2022-11-21T10:52:42.750Z] Command:       /opt/homebrew/Cellar/node/19.1.0/bin/node /opt/homebrew/bin/firebase serve
+[debug] [2022-11-21T10:52:42.750Z] CLI Version:   11.16.1
+[debug] [2022-11-21T10:52:42.750Z] Platform:      darwin
+[debug] [2022-11-21T10:52:42.750Z] Node Version:  v19.1.0
+[debug] [2022-11-21T10:52:42.751Z] Time:          Mon Nov 21 2022 11:52:42 GMT+0100 (Central European Standard Time)
+[debug] [2022-11-21T10:52:42.751Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-11-21T10:52:42.830Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-11-21T10:52:42.831Z] > authorizing via signed-in user (alubeidabbas1@gmail.com)
+[debug] [2022-11-21T10:52:42.831Z] [iam] checking project alubeid-abibr-dinner for permissions ["firebase.projects.get"]
+[debug] [2022-11-21T10:52:42.832Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/alubeid-abibr-dinner:testIamPermissions [none]
+[debug] [2022-11-21T10:52:42.832Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/alubeid-abibr-dinner:testIamPermissions x-goog-quota-user=projects/alubeid-abibr-dinner
+[debug] [2022-11-21T10:52:42.832Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/alubeid-abibr-dinner:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2022-11-21T10:52:43.536Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/alubeid-abibr-dinner:testIamPermissions 200
+[debug] [2022-11-21T10:52:43.537Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/alubeid-abibr-dinner:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2022-11-21T10:52:43.538Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/alubeid-abibr-dinner [none]
+[debug] [2022-11-21T10:52:43.789Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/alubeid-abibr-dinner 200
+[debug] [2022-11-21T10:52:43.790Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/alubeid-abibr-dinner {"projectId":"alubeid-abibr-dinner","projectNumber":"63455969874","displayName":"alubeid-abibr-dinner","name":"projects/alubeid-abibr-dinner","resources":{"hostingSite":"alubeid-abibr-dinner","realtimeDatabaseInstance":"alubeid-abibr-dinner-default-rtdb"},"state":"ACTIVE","etag":"1_5667da68-9d6d-4c1a-8e07-fcd9c2bc857d"}
+[info] 
+[info] === Serving from '/Users/abbas/Desktop/labs/abibr-alubeid-ht22-2_3'...
+[info] 
+[debug] [2022-11-21T10:52:43.796Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/alubeid-abibr-dinner/sites 
+[debug] [2022-11-21T10:52:44.711Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/alubeid-abibr-dinner/sites 200
+[debug] [2022-11-21T10:52:44.711Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/alubeid-abibr-dinner/sites {"sites":[{"name":"projects/alubeid-abibr-dinner/sites/alubeid-abibr-dinner","defaultUrl":"https://alubeid-abibr-dinner.web.app","appId":"1:63455969874:web:b455530714d97649acd58b","type":"DEFAULT_SITE"}]}
+[debug] [2022-11-21T10:52:44.712Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/alubeid-abibr-dinner/webApps/1:63455969874:web:b455530714d97649acd58b/config [none]
+[debug] [2022-11-21T10:52:45.571Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/alubeid-abibr-dinner/webApps/1:63455969874:web:b455530714d97649acd58b/config 200
+[debug] [2022-11-21T10:52:45.572Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/alubeid-abibr-dinner/webApps/1:63455969874:web:b455530714d97649acd58b/config {"projectId":"alubeid-abibr-dinner","appId":"1:63455969874:web:b455530714d97649acd58b","databaseURL":"https://alubeid-abibr-dinner-default-rtdb.firebaseio.com","storageBucket":"alubeid-abibr-dinner.appspot.com","apiKey":"AIzaSyDLgSQRPnXHW9ma1U-xFXD4oCdV4YK9aO8","authDomain":"alubeid-abibr-dinner.firebaseapp.com","messagingSenderId":"63455969874","measurementId":"G-MRNKFPK5WF"}
+[debug] [2022-11-21T10:52:45.580Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/alubeid-abibr-dinner [none]
+[debug] [2022-11-21T10:52:45.804Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/alubeid-abibr-dinner 200
+[debug] [2022-11-21T10:52:45.804Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/alubeid-abibr-dinner {"projectId":"alubeid-abibr-dinner","projectNumber":"63455969874","displayName":"alubeid-abibr-dinner","name":"projects/alubeid-abibr-dinner","resources":{"hostingSite":"alubeid-abibr-dinner","realtimeDatabaseInstance":"alubeid-abibr-dinner-default-rtdb"},"state":"ACTIVE","etag":"1_5667da68-9d6d-4c1a-8e07-fcd9c2bc857d"}
+[info] i  hosting[alubeid-abibr-dinner]: Serving hosting files from: public {"metadata":{"emulator":{"name":"hosting"},"message":"Serving hosting files from: \u001b[1mpublic\u001b[22m"}}
+[info] ✔  hosting[alubeid-abibr-dinner]: Local server: http://localhost:5002 {"metadata":{"emulator":{"name":"hosting"},"message":"Local server: \u001b[4m\u001b[1mhttp://localhost:5002\u001b[22m\u001b[24m"}}
